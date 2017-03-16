@@ -15,6 +15,6 @@
   },
   "repository": {},
   "scripts": {
-    "start": "node dhnotification.js",
+    "start": "node dhnotification.js"
   }
 }
