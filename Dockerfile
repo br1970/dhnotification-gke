@@ -1,4 +1,3 @@
-
 FROM node:6.9.5
 EXPOSE 8082
 RUN mkdir -p /usr/src/app
