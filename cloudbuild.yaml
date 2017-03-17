@@ -2,6 +2,7 @@ steps:
 
 - name: 'ubuntu'
   args: ['bash', '']
+  env:
   - 'BUILD=$BUILD_ID'
 
 - name: 'gcr.io/cloud-builders/docker'
