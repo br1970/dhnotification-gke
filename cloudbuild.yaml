@@ -1,7 +1,6 @@
 steps:
 
 - name: 'ubuntu'
-#  args: ['bash', '#']
   env:
   - 'BUILD=$BUILD_ID'
 
@@ -9,9 +8,10 @@ steps:
   args: ['build', '-t', 'gcr.io/dreamhome-cpo/dhnotification:$BUILD_ID', '.']
   id: 'build-image'
 
+images: ['gcr.io/dreamhome-cpo/dhnotification']
+
 - name: 'ubuntu'
   args: ['bash', 'kubectl set image deployment/dhnotification dhnotification=gcr.io/dreamhome-cpo/dhnotification:$BUILD_ID --namespace dreamhome']
   waitFor: ['build-image']
 
-images: ['gcr.io/dreamhome-cpo/dhnotification']
 
