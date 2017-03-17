@@ -14,7 +14,7 @@ steps:
   id: 'push-image'
 
 - name: 'ubuntu'
-  args: ['bash', '-c', 'kubectl set image deployment/dhnotification dhnotification=gcr.io/dreamhome-cpo/dhnotification:$BUILD_ID --namespace dreamhome']
+  args: ['sh', 'kubectl set image deployment/dhnotification dhnotification=gcr.io/dreamhome-cpo/dhnotification:$BUILD_ID --namespace dreamhome']
   waitFor: ['push-image']
 
 images: ['gcr.io/dreamhome-cpo/dhnotification']
