@@ -6,11 +6,11 @@ steps:
   - 'BUILD=$BUILD_ID'
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/dreamhome-cpo/dhnotification:$BUILD', '.']
+  args: ['build', '-t', 'gcr.io/dreamhome-cpo/dhnotification:$BUILD_ID', '.']
   id: 'build-image'
 
 - name: 'ubuntu'
-  args: ['bash', 'kubectl set image deployment/dhnotification dhnotification=gcr.io/dreamhome-cpo/dhnotification:$BUILD --namespace dreamhome']
+  args: ['bash', 'kubectl set image deployment/dhnotification dhnotification=gcr.io/dreamhome-cpo/dhnotification:$BUILD_ID --namespace dreamhome']
   waitFor: ['build-image']
 
 images: ['gcr.io/dreamhome-cpo/dhnotification']
