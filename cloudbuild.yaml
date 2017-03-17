@@ -1,7 +1,7 @@
 steps:
 
 - name: 'ubuntu'
-  args: ['bash', 'echo']
+#  args: ['bash', '#']
   env:
   - 'BUILD=$BUILD_ID'
 
