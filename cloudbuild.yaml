@@ -5,7 +5,7 @@ steps:
   - 'BUILD=$BUILD_ID'
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/dreamhome-cpo/dhnotification:$BUILD_ID', '.']
+  args: ['build', '-t', 'gcr.io/dreamhome-cpo/dhnotification:$BUILD_ID', '-t', 'gcr.io/dreamhome-cpo/dhnotification:latest','.']
   id: 'build-image'
 
 - name: 'gcr.io/cloud-builders/docker'
