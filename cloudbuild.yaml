@@ -22,5 +22,5 @@ steps:
 #  args: ['sh', '-c', 'kubectl set image deployment/dhnotification dhnotification=gcr.io/dreamhome-cpo/dhnotification:$BUILD_ID --namespace dreamhome']
 #  waitFor: ['install-kubectl']
 
-images: ['gcr.io/dreamhome-cpo/dhnotification:$BUILD_ID', 'gcr.io/dreamhome-cpo/dhnotification:lastes']
+images: ['gcr.io/dreamhome-cpo/dhnotification:$BUILD_ID', 'gcr.io/dreamhome-cpo/dhnotification:latest']
 
